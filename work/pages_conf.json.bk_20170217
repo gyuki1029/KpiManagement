@@ -1,0 +1,603 @@
+{
+  "pages": [
+    {
+      "id": "pro_search",
+      "ejs": "___pro_search.ejs",
+      "output": "pro_search.ejs",
+      "head_title": "成果物の検索",
+      "topbar": {
+        "title": {
+          "open_tag": "<a class=\"navbar-brand\" href=\"#\">",
+          "close_tag": "</a>",
+          "text": "成果物の検索・更新"
+        },
+        "links": [
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"A\">",
+            "close_tag": "</a></li>",
+            "text": "成果物の新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"B\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"C\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの検索・更新"
+          }
+        ]
+      },
+      "sidebar": {
+        "navigators": [
+          {
+            "open_tag": "<li id=\"side_navigator_search\"><a class=\"nav-link\" href=\"#section0\">",
+            "close_tag": "</a></li>",
+            "text": "検索"
+          },
+          {
+            "open_tag": "<li id=\"side_navigiator_result\"><a class=\"nav-link\" href=\"#section1\">",
+            "close_tag": "</a></li>",
+            "text": "検索結果"
+          }
+        ]
+      },
+      "contents": {
+        "sections": [
+          {
+            "subheader": {
+              "open_tag": "<h4 id=\"section0\" class=\"sub-header\">",
+              "close_tag": "</h4>",
+              "text": "検索"
+            },
+            "form_contents": [
+              {
+                "label": {
+                  "open_tag": "<label for=\"code\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "分類コード"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"code\" type=\"text\" class=\"form-control\" id=\"code\" placeholder=\"F0001\">",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"name_ja\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物名称（日本語）"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"name_ja\" type=\"text\" class=\"form-control\" id=\"input_name_ja\" placeholder=\"売上高増減率\">",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"name_en\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物名称（英語）"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"name_en\" type=\"text\" class=\"form-control\" id=\"name_en\" placeholder=\"Sales rate of change\">",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"status\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物ステータス"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><select name=\"status\" class=\"form-control\" id=\"status\"><option>設計中</option><option>運用中</option><option>廃止</option>",
+                  "close_tag": "</select></div>"
+                }
+              }
+            ]
+          },
+          {
+            "subheader": {
+              "open_tag": "<h4 id=\"section1\" class=\"sub-header\">",
+              "close_tag": "</h4>",
+              "text": "検索結果"
+            },
+            "res_columns": [
+              {
+                "open_tag": "<th>",
+                "close_tag": "</th>",
+                "text": "分類コード"
+              },
+              {
+                "open_tag": "<th>",
+                "close_tag": "</th>",
+                "text": "成果物名称"
+              },
+              {
+                "open_tag": "<th>",
+                "close_tag": "</th>",
+                "text": "読み方"
+              },
+              {
+                "open_tag": "<th>",
+                "close_tag": "</th>",
+                "text": "成果物ステータス"
+              },
+              {
+                "open_tag": "<th>",
+                "close_tag": "</th>",
+                "text": "業務機能"
+              },
+              {
+                "open_tag": "<th>",
+                "close_tag": "</th>",
+                "text": "管理部署"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pro_info",
+      "ejs": "___pro_info.ejs",
+      "output": "pro_info.ejs",
+      "head_title": "成果物の詳細情報",
+      "topbar": {
+        "title": {
+          "open_tag": "<a class=\"navbar-brand\" href=\"#\">",
+          "close_tag": "</a>",
+          "text": "成果物の検索・更新"
+        },
+        "links": [
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"A\">",
+            "close_tag": "</a></li>",
+            "text": "成果物の新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"B\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"C\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの検索・更新"
+          }
+        ]
+      },
+      "sidebar": {
+        "navigators": [
+          {
+            "open_tag": "<li id=\"side_navigator_proinfo\"><a class=\"nav-link\" href=\"#section0\">",
+            "close_tag": "</a></li>",
+            "text": "成果物情報"
+          }
+        ]
+      },
+      "contents": {}
+    },
+    {
+      "id": "pro_registration",
+      "ejs": "___pro_registration.ejs",
+      "output": "pro_registration.ejs",
+      "head_title": "成果物の新規登録",
+      "topbar": {
+        "title": {
+          "open_tag": "<a class=\"navbar-brand\" href=\"#\">",
+          "close_tag": "</a>",
+          "text": "成果物の新規登録"
+        },
+        "links": [
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"A\">",
+            "close_tag": "</a></li>",
+            "text": "成果物の検索・更新"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"B\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"C\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの検索・更新"
+          }
+        ]
+      },
+      "sidebar": {
+        "navigators": [
+          {
+            "open_tag": "<li id=\"side_navigator_proregi\"><a class=\"nav-link\" href=\"#section0\">",
+            "close_tag": "</a></li>",
+            "text": "入力フォーム"
+          }
+        ]
+      },
+      "contents": {
+        "sections": [
+          {
+            "form_contents": [
+              {
+                "label": {
+                  "open_tag": "<label for=\"code\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "分類コード"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"code\" type=\"text\" class=\"form-control\" id=\"code\" placeholder=\"\">",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"name\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物名称"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"name\" type=\"text\" class=\"form-control\" id=\"name\" ",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"ruby\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "読み方"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"ruby\" type=\"text\" class=\"form-control\" id=\"ruby\" placeholder=\"\">",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"background\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "背景"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><textarea rows=\"5\" name=\"background\" type=\"text\" class=\"form-control\" id=\"background\" placeholder=\"\">",
+                  "close_tag": "</textarea></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"abst_ja\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物概要（日本語）"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><textarea rows=\"5\" name=\"abst_ja\" type=\"text\" class=\"form-control\" id=\"abst_ja\" placeholder=\"\">",
+                  "close_tag": "</textarea></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"abst_en\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物概要（英語）"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><textarea rows=\"5\" name=\"abst_en\" type=\"text\" class=\"form-control\" id=\"abst_en\" placeholder=\"\">",
+                  "close_tag": "</textarea></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"status\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物ステータス"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><select name=\"status\" class=\"form-control\" id=\"status\"><option>設計中</option><option>運用中</option><option>廃止</option>",
+                  "close_tag": "</select></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"num_unit\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "採番単位"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"num_unit\" type=\"text\" class=\"form-control\" id=\"num_unit\" placeholder=\"\">",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"bus_func\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "業務機能"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"bus_func\" type=\"text\" class=\"form-control\" id=\"bus_func\" placeholder=\"\">",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"manage_dep\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "管理部署"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"manage_dep\" type=\"text\" class=\"form-control\" id=\"manage_dep\" placeholder=\"\">",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"remarks\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "備考"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"remarks\" type=\"text\" class=\"form-control\" id=\"remarks\" placeholder=\"\">",
+                  "close_tag": "</input></div>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pro_update",
+      "ejs": "___pro_update.ejs",
+      "output": "pro_update.ejs",
+      "head_title": "成果物の更新",
+      "topbar": {
+        "title": {
+          "open_tag": "<a class=\"navbar-brand\" href=\"#\">",
+          "close_tag": "</a>",
+          "text": "成果物の検索・更新"
+        },
+        "links": [
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"A\">",
+            "close_tag": "</a></li>",
+            "text": "成果物の新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"B\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"C\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの検索・更新"
+          }
+        ]
+      },
+      "sidebar": {
+        "navigators": [
+          {
+            "open_tag": "<li id=\"side_navigator_proupdate\"><a class=\"nav-link\" href=\"#section0\">",
+            "close_tag": "</a></li>",
+            "text": "更新フォーム"
+          }
+        ]
+      },
+      "contents": {
+        "sections": [
+          {
+            "form_contents": [
+              {
+                "label": {
+                  "open_tag": "<label for=\"code\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "分類コード"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"code\" type=\"text\" class=\"form-control\" id=\"code\" value='<%= pro_info.code%>'>",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"name\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物名称"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"name\" type=\"text\" class=\"form-control\" id=\"name\" value='<%= pro_info.name%>'>",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"ruby\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "読み方"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"ruby\" type=\"text\" class=\"form-control\" id=\"ruby\" value='<%= pro_info.ruby%>'>",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"background\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "背景"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><textarea rows=\"5\" name=\"background\" type=\"text\" class=\"form-control\" id=\"background\">",
+                  "close_tag": "</textarea></div>",
+                  "text": "<%= pro_info.background%>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"abst_ja\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物概要（日本語）"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><textarea rows=\"5\" name=\"abst_ja\" type=\"text\" class=\"form-control\" id=\"abst_ja\">",
+                  "close_tag": "</textarea></div>",
+                  "text": "<%= pro_info.abst_ja %>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"abst_en\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物概要（英語）"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><textarea rows=\"5\" name=\"abst_en\" type=\"text\" class=\"form-control\" id=\"abst_en\">",
+                  "close_tag": "</textarea></div>",
+                  "text": "<%= pro_info.abst_en %>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"status\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "成果物ステータス"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><select name=\"status\" class=\"form-control\" id=\"status\"><option>設計中</option><option>運用中</option><option>廃止</option>",
+                  "close_tag": "</select></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"num_unit\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "採番単位"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"num_unit\" type=\"text\" class=\"form-control\" id=\"num_unit\" value='<%= pro_info.num_unit %>'>",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"bus_func\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "業務機能"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"bus_func\" type=\"text\" class=\"form-control\" id=\"bus_func\" value='<%= pro_info.bus_func %>'>",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"manage_dep\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "管理部署"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"manage_dep\" type=\"text\" class=\"form-control\" id=\"manage_dep\" value='<%= pro_info.manage_dep %>'>",
+                  "close_tag": "</input></div>"
+                }
+              },
+              {
+                "label": {
+                  "open_tag": "<label for=\"remarks\" class=\"col-sm-3 col-form-label\">",
+                  "close_tag": "</label>",
+                  "text": "備考"
+                },
+                "input": {
+                  "open_tag": "<div class=\"col-sm-9\"><input name=\"remarks\" type=\"text\" class=\"form-control\" id=\"remarks\" value='<%= pro_info.remarks %>'>",
+                  "close_tag": "</input></div>"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },{
+      "id": "pro_confirm",
+      "ejs": "___pro_confirm.ejs",
+      "output": "pro_confirm.ejs",
+      "head_title": "登録内容確認",
+      "topbar": {
+        "title": {
+          "open_tag": "<a class=\"navbar-brand\" href=\"#\">",
+          "close_tag": "</a>",
+          "text": "成果物の検索・更新"
+        },
+        "links": [
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"A\">",
+            "close_tag": "</a></li>",
+            "text": "成果物の新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"B\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"C\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの検索・更新"
+          }
+        ]
+      },
+      "sidebar": {
+        "navigators": [
+          {
+            "open_tag": "<li id=\"side_navigator_proinfo\"><a class=\"nav-link\" href=\"#section0\">",
+            "close_tag": "</a></li>",
+            "text": "登録情報"
+          }
+        ]
+      },
+      "contents": {}
+    },{
+      "id": "pro_complete",
+      "ejs": "___pro_complete.ejs",
+      "output": "pro_complete.ejs",
+      "head_title": "登録完了",
+      "topbar": {
+        "title": {
+        },
+        "links": [
+          {
+          "open_tag": "<a class=\"navbar-brand\" href=\"#\">",
+          "close_tag": "</a>",
+          "text": "成果物の検索・更新"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"A\">",
+            "close_tag": "</a></li>",
+            "text": "成果物の新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"B\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの新規登録"
+          },
+          {
+            "open_tag": "<li class=\"nav-item\"><a class=\"nav-link\" href=\"C\">",
+            "close_tag": "</a></li>",
+            "text": "KPIの検索・更新"
+          }
+        ]
+      },
+      "sidebar": {
+        "navigators": [
+          {
+            "open_tag": "<li id=\"side_navigator_proinfo\"><a class=\"nav-link\" href=\"#section0\">",
+            "close_tag": "</a></li>",
+            "text": "登録情報"
+          }
+        ]
+      },
+      "contents": {}
+    }
+  ]
+}

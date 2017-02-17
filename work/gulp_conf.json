@@ -1,0 +1,6 @@
+{
+    "pages_conf_path":"./work/pages_conf.json",
+    "template_path":"./work/_template.ejs",
+    "html_dist":"./public",
+    "ejs_dist":"./views"
+}

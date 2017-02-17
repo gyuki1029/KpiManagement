@@ -1,0 +1,72 @@
+<h3 id="section0" class="sub-header">検索</h3>
+<h4 class="sub-header">検索条件</h4>
+<div class="container">
+  <form id="pro_search_form">
+    <% for(var i = 0; i < conf.sections[0].form_contents.length;i++){%>
+      <div class="form-group row">
+      <%- conf.sections[0].form_contents[i].label.open_tag %><%= conf.sections[0].form_contents[i].label.text %><%- conf.sections[0].form_contents[i].label.close_tag %>
+      <%- conf.sections[0].form_contents[i].input.open_tag %><%- conf.sections[0].form_contents[i].input.close_tag %>
+      </div>
+    <% } %>
+
+    <div class="form-group row">
+      <div class="offset-sm-10 col-sm-2">
+        <button type="button" class="btn btn-primary" id="pro_search_button">search</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- 発言内容の分析結果 -->
+<h3 id="section1" class="sub-header">検索結果</h3>
+
+<!--<div class="table-responsive">-->
+  <table class="table table-striped">
+    <thead class="thead-inverse">
+      <tr>
+        <%
+        for(var i = 0; i < conf.sections[1].res_columns.length;i++){ 
+      %>
+          <%- conf.sections[1].res_columns[i].open_tag %>
+            <%= conf.sections[1].res_columns[i].text %>
+              <%- conf.sections[1].res_columns[i].close_tag %>
+                <%
+        }
+      %>
+      <th></th>
+      <th></th>
+      </tr>
+    </thead>
+      
+        <tbody id="html_api_response"></tbody>
+        <script type="text/x-handlebars-template" id="scr_api_response">
+        {{#each product}}
+        <tr>
+          <td >{{code}}</a></td>
+          <td>{{name}}</td>
+          <td>{{ruby}}</td>
+          <td>{{status}}</td>
+          <td>{{bus_func}}</td>
+          <td>{{manage_dep}}</td>
+          <td>
+            <form>
+            <input type="hidden" name="code" value={{code}}>
+            <button name={{code}} type="button" class="btn btn-info {{code}}_info_button">詳細ページ</button>
+            </form>
+          </td>
+          <td>
+            <form>
+            <input type="hidden" name="code" value={{code}}>
+            <button name={{code}} type="button" class="btn btn-warning {{code}}_update_button">更新ページ</button>
+            </form>
+          </td>
+          {{!--<td>{{background}}</td>
+          <td>{{abst_ja}}</td>
+          <td>{{abst_en}}</td>
+          <td>{{num_unit}}</td>
+          <td>{{remarks}}</td>--}}
+        </tr>
+        {{/each}}
+        </script>
+  </table>
+  <p id="err_analysis" class="text-danger" style="display:none">ERROR: サーバーから分類結果を取得できませんでした</p>
+<!--</div>-->

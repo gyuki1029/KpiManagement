@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>登録内容確認</title>
+
+  <!-- Bootstrap core CSS -->
+  <!--<link href="/css/vendor/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+   <!-- topbar-->
+  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+          <a class="navbar-brand" href="#">成果物・KPI管理システム</a>
+          <li class="nav-item"><a class="nav-link" href="/pro_search">成果物の検索・更新</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pro_registration">成果物の新規登録</a></li>              
+          <li class="nav-item"><a class="nav-link" href="kpi_search">KPIの検索・更新</a></li>
+          <li class="nav-item"><a class="nav-link" href="kpi_registration">KPIの新規登録</a></li>
+      </ul>
+    </div>
+</nav>
+    <!-- side bar & contents -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- side ver -->
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <ul class="nav nav-pills flex-column">
+  
+          <li id="side_navigator_proinfo"><a class="nav-link" href="#section0">登録情報</a></li>
+  
+</ul>
+        </nav>
+
+        <!-- contents -->
+      <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          
+          <h3 id="section0" class="sub-header">登録情報</h3>
+<div class="table-responsive">
+
+  <table class="table table-striped">
+    <tbody id="result_analysis">
+      <tr>
+        <th>分類コード</th>
+        <td><%= pro_info.code %></td>
+      </tr>
+      <tr>
+        <th>成果物名称</th>
+        <td><%= pro_info.name %></td>
+      </tr>
+      <tr>
+        <th>読み方</th>
+        <td><%= pro_info.ruby %></td>
+      </tr>
+      <tr>
+        <th>背景</th>
+        <td><%= pro_info.background %></td>
+      </tr>
+      <tr>
+        <th>成果物概要（日本語）</th>
+        <td><%= pro_info.abst_ja %></td>
+      </tr>
+      <tr>
+        <th>成果物概要（英語）</th>
+        <td><%= pro_info.abst_en %></td>
+      </tr>
+      <tr>
+        <th>成果物ステータス</th>
+        <td><%= pro_info.status %></td>
+      </tr>
+      <tr>
+        <th>採番単位</th>
+        <td><%= pro_info.num_unit %></td>
+      </tr>
+      <tr>
+        <th>業務機能</th>
+        <td><%= pro_info.bus_func %></td>
+      </tr>
+      <tr>
+        <th>管理部署</th>
+        <td><%= pro_info.manage_dep %></td>
+      </tr>
+      <tr>
+        <th>備考</th>
+        <td><%= pro_info.remarks %></td>
+      </tr>
+    </tbody>
+  </table>
+  <form id="pro_confirm_form">
+<div class="form-group row">
+      <input type="hidden" name="code" value='<%= pro_info.code %>'>
+      <input type="hidden" name="abst_ja" value='<%= pro_info.abst_ja %>'>
+      <input type="hidden" name="abst_en" value='<%= pro_info.abst_en %>'>
+      <input type="hidden" name="status" value='<%= pro_info.status %>'>
+      <input type="hidden" name="name" value='<%= pro_info.name %>'>
+      <input type="hidden" name="ruby" value='<%= pro_info.ruby %>'>
+      <input type="hidden" name="background" value='<%= pro_info.background %>'>
+      <input type="hidden" name="num_unit" value='<%= pro_info.num_unit %>'>
+      <input type="hidden" name="bus_func" value='<%= pro_info.bus_func %>'>
+      <input type="hidden" name="manage_dep" value='<%= pro_info.manage_dep %>'>
+      <input type="hidden" name="pro_info.remarks" value='<%= pro_info.remarks %>'>
+      <div class="offset-sm-10 col-sm-2">
+        <button type="button" class="btn btn-primary" id="pro_confirm_button">この内容で登録する</button>
+      </div>
+    </div>
+  </form>
+</div>
+        </main>
+      </div>
+    </div>
+
+ <!-- Placed at the end of the document so the pages load faster -->
+   <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+			  crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+          crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  <!-- customized js -->
+  <script src="js/util.js"></script>
+  <script src="js/pro_search.js"></script>
+    
+</body>
+
+</html>

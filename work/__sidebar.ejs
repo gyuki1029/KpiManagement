@@ -1,0 +1,5 @@
+<ul class="nav nav-pills flex-column">
+  <% for(var i = 0; i < conf.navigators.length;i++){%>
+          <%- conf.navigators[i].open_tag %><%= conf.navigators[i].text %><%- conf.navigators[i].close_tag %>
+  <% } %>
+</ul>
